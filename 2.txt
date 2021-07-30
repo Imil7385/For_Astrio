@@ -1,0 +1,1 @@
+SELECT worker.first_name, worker.last_name, car.model, GROUP_CONCAT(child.name SEPARATOR ',') AS Kids FROM `worker` INNER JOIN `car` ON car.worker_id = worker.id INNER JOIN `child` ON child.worker_id = worker.id GROUP BY worker.id
